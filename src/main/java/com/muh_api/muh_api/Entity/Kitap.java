@@ -82,7 +82,7 @@ public class Kitap {
 
     public void setFiyat(float fiyat) {
         this.fiyat = fiyat;
-    }   
+    }
 
     public String getImage() {
         return image;
