@@ -32,7 +32,15 @@ public class SecurityConf extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.httpBasic().authenticationEntryPoint(new AutEntryPoint());
         http.authorizeRequests().antMatchers(HttpMethod.POST,"/api/auth").authenticated()
-                
+                .antMatchers(HttpMethod.POST,"/api/makale").authenticated()
+                .antMatchers(HttpMethod.POST,"/api/users").authenticated()
+                .antMatchers(HttpMethod.POST,"/api/mevzuat").authenticated()
+                .antMatchers(HttpMethod.DELETE,"/api/mevzuat/**").authenticated()
+                .antMatchers(HttpMethod.DELETE,"/api/makale/**").authenticated()
+                .antMatchers(HttpMethod.POST,"/api/kitap").authenticated()
+                .antMatchers(HttpMethod.DELETE,"/api/kitap/**").authenticated()
+                .antMatchers(HttpMethod.POST,"/api/vergi").authenticated()
+                .antMatchers(HttpMethod.DELETE,"/api/vergi/**").authenticated()
 
                 .and()
                 .authorizeRequests().anyRequest().permitAll();

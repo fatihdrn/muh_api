@@ -21,7 +21,7 @@ public class VergiController {
     @PostMapping("/vergi")
     public void vergiEkle(@RequestBody Vergi vergi){
 
-
+       System.out.println(vergi.getDate());
         vergiService.vergiEkle(vergi);
     }
     @CrossOrigin

@@ -16,5 +16,17 @@ public class MuhApiApplication {
 
 
     }
+    @Bean
+    CommandLineRunner createInitialUsers(UserService userService){
+        return new CommandLineRunner() {
+            @Override
+            public void run(String... args) throws Exception {
+                User user=new User();
+                user.setUsername("fatihdrn06");
+                user.setPassword("20121993fadu");
+                userService.save(user);
+            }
+        };
+    }
 
 }

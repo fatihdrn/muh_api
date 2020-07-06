@@ -15,10 +15,10 @@ public class Vergi {
     @Column(name="ad")
     private String ad;
 
-    @JsonFormat(pattern="yyyy-MM-dd")
+    @JsonFormat(pattern="dd-MM-yyyy")
     @Column(name="date")
     private Date date;
-    @JsonFormat(pattern="yyyy-MM-dd")
+    @JsonFormat(pattern="dd-MM-yyyy")
     @Column(name="date1")
     private Date date1;
 
